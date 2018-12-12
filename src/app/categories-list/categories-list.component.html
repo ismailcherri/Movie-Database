@@ -1,0 +1,8 @@
+<mat-list *ngIf="categories">
+  <span *ngFor="let category of categories">
+    <mat-list-item>
+      <button mat-button (click)="itemClicked(category._links.self.href)">{{ category.name }}</button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </span>
+</mat-list>
